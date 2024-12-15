@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Android_book_tracker" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Splash" parent="Theme.SplashScreen">
+        <!--> 6a552c bfac83 ffffff <-->
+        <item name="windowSplashScreenBackground">#6a552c</item>>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/bookgif</item>>
+        <item name="postSplashScreenTheme">@style/Theme.Android_book_tracker</item>>
+    </style>>
+</resources>
