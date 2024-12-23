@@ -12,7 +12,7 @@ class SplashViewModel : ViewModel() {
     val isLoading = _mutableStateFlow.asStateFlow()
 
     private suspend fun imitateLoading() {
-        delay(2000)
+        delay(500)
         _mutableStateFlow.value = false
     }
     init {

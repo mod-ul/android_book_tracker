@@ -8,7 +8,7 @@ import androidx.room.TypeConverters
 import com.example.android_book_tracker.data.local.dao.BookDao
 import com.example.android_book_tracker.domain.model.Book
 
-@Database(entities = [Book::class], version = 1)
+@Database(entities = [Book::class], version = 1, exportSchema = false)
 @TypeConverters(DateConverter::class)
 abstract class BookDatabase : RoomDatabase() {
     abstract fun bookDao() : BookDao
@@ -19,7 +19,7 @@ abstract class BookDatabase : RoomDatabase() {
         fun getDatabase(context: Context): BookDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room
-                    .databaseBuilder(context, BookDatabase::class.java, "")
+                    .databaseBuilder(context, BookDatabase::class.java, "book_database")
                     .fallbackToDestructiveMigration()
                     .build()
 

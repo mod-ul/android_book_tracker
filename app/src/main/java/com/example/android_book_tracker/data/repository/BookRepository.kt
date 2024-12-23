@@ -10,4 +10,13 @@ class BookRepository(private val bookDao: BookDao) {
     fun addBook(book: Book) {
         bookDao.addBook(book)
     }
+
+    fun editBook(book: Book) {
+        bookDao.editBook(book)
+    }
+
+    fun getBookById(id: Long) : Book {
+        val book = bookDao.getBookById(id)
+        return book
+    }
 }

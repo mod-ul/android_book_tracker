@@ -6,6 +6,6 @@ import com.example.android_book_tracker.domain.model.Book
 import kotlinx.coroutines.flow.Flow
 
 class HomeViewModel: ViewModel() {
-    private val repository = MyApp.instance.repository
+    val repository = MyApp.instance.repository
     val books: Flow<List<Book>> = repository.books
 }

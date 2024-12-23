@@ -12,6 +12,8 @@ data class Book(
     var author: String = "",
     var genre: String = "",
     var note: String = "",
-    var startedAt: Date,
-    var finishedAt: Date
+    var startedAt: Date = Date(),
+    var finishedAt: Date = Date(),
+    var pages: Int = 1,
+    var currentPage: Int = 1
 )
